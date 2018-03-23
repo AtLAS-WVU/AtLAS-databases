@@ -1,0 +1,27 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+
+CREATE TABLE `friend_connection` (
+  `friendship_id` int(4) NOT NULL,
+  `user_1` varchar(20) NOT NULL,
+  `user_2` varchar(20) NOT NULL,
+  `friendship_status` varchar(15) NOT NULL,
+  `friendship_date` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `friend_connection`
+  ADD UNIQUE KEY `friendship_id` (`friendship_id`);
+
+
+ALTER TABLE `friend_connection`
+  MODIFY `friendship_id` int(4) NOT NULL AUTO_INCREMENT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

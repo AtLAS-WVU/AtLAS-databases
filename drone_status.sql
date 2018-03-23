@@ -1,0 +1,28 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+
+CREATE TABLE `drone_status` (
+  `drone_id` varchar(8) NOT NULL,
+  `drone_private_key` varchar(45) DEFAULT NULL,
+  `current_battery_life` int(11) DEFAULT NULL,
+  `current_stage_of_delivery` varchar(45) DEFAULT NULL,
+  `latitude` double DEFAULT NULL,
+  `longitude` double DEFAULT NULL,
+  `altitude` double DEFAULT NULL,
+  `speed` double DEFAULT NULL,
+  `last_update` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `drone_status`
+  ADD PRIMARY KEY (`drone_id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
